@@ -1,0 +1,50 @@
+skill_name,trigger_keywords,description,category,phase_gate,priority
+award-review,"award review|post-award review|contract review|award checklist|review award","Produces a structured post-award review using govcon skills for USASpending and SAM.gov data.",govcon-skill,gate-5,high
+award-review-reference,"award review reference|award review definitions|observation definitions|award review thresholds","Provides companion reference material for award-review, including definitions, thresholds, and sample output.",govcon-reference,gate-5,medium
+bls-oews-api,"bls|oews|wage data|occupation wages|salary benchmark|labor rates","Retrieves labor market wage data used by IGCE and pricing workflows.",govcon-skill,all-gates,high
+bls-oews-api-reference,"bls reference|oews reference|soc lookup|wage methodology","Provides companion reference material for BLS OEWS workflows, including SOC lookup and query patterns.",govcon-reference,all-gates,medium
+ecfr-api,"ecfr|cfr lookup|far clause text|dfars clause text|regulation text","Retrieves current CFR and clause text for regulation lookup workflows.",govcon-skill,all-gates,medium
+ecfr-api-reference,"ecfr reference|title 48 map|cfr reference|common far sections","Provides companion reference material for eCFR workflows and clause navigation.",govcon-reference,all-gates,low
+federalregister-api,"federal register|proposed rule|final rule|notice|executive order","Retrieves Federal Register documents and rulemaking notices.",govcon-skill,all-gates,low
+federalregister-api-reference,"federal register reference|regulatory timeline|far case history","Provides companion reference material for Federal Register workflows.",govcon-reference,all-gates,low
+grants-builder,"grant budget|grants budget|sf-424a|2 cfr 200|grant cost estimate","Builds federal grant budgets and budget narratives using the govcon skill set.",govcon-skill,all-gates,low
+gsa-calc-ceilingrates,"gsa calc|calc plus|ceiling rates|gsa rates|schedule rates","Retrieves awarded ceiling rates from GSA CALC+ for rate benchmarking.",govcon-skill,gate-5,high
+gsa-calc-ceilingrates-reference,"gsa calc reference|calc reference|rate benchmark reference","Provides companion reference material for GSA CALC+ workflows and benchmarking.",govcon-reference,gate-5,medium
+gsa-perdiem-rates,"per diem|travel rates|mie|lodging rates|travel estimate","Retrieves federal per diem rates for travel estimating and pricing.",govcon-skill,gate-5,high
+gsa-perdiem-rates-reference,"per diem reference|travel formula|travel estimate reference","Provides companion reference material for per diem workflows and travel formulas.",govcon-reference,gate-5,medium
+igce-builder-cr,"igce|cost reimbursement|cpff|cpaf|cpif|cost reimbursable estimate","Builds cost-reimbursement IGCE outputs using BLS, CALC+, and per diem inputs.",govcon-skill,gate-5,high
+igce-builder-ffp,"igce|firm fixed price|ffp estimate|wrap rate|cost build up","Builds firm-fixed-price IGCE outputs using labor, rate, and travel inputs.",govcon-skill,gate-5,high
+igce-builder-lh-tm,"igce|labor hour|time and materials|t&m|lh estimate","Builds labor-hour and time-and-materials IGCE outputs using labor and rate inputs.",govcon-skill,gate-5,high
+market-research-builder,"market research|far part 10|vendor landscape|prior awards|competition analysis|set-aside","Builds FAR Part 10 market research outputs using govcon skill data and analysis.",govcon-skill,gate-1,high
+ot-cost-analysis,"other transaction cost analysis|ot cost|10 usc 4021|milestone pricing","Builds cost analysis and price reasonableness outputs for other transaction workflows.",govcon-skill,gate-5,low
+ot-project-description-builder,"other transaction project description|ot scope|prototype ot|10 usc 4022","Builds project description and milestone structure outputs for other transaction workflows.",govcon-skill,gate-3,low
+regulationsgov-api,"regulations.gov|docket|public comments|rulemaking docket","Retrieves docket and comment information from Regulations.gov.",govcon-skill,all-gates,low
+regulationsgov-api-reference,"regulations.gov reference|docket tracker|rulemaking reference","Provides companion reference material for Regulations.gov workflows.",govcon-reference,all-gates,low
+sam-gov-api,"sam.gov|uei|registration|contract opportunities|contract awards|fpds|cage","Retrieves SAM.gov entity, exclusion, opportunity, and contract award data.",govcon-skill,all-gates,high
+sam-gov-api-reference,"sam reference|sam schema|business type codes|sam workflows","Provides companion reference material for SAM.gov schemas, codes, and composite workflows.",govcon-reference,all-gates,medium
+sow-pws-builder,"sow|pws|statement of work|performance work statement|requirements drafting","Builds SOW or PWS content and structured scope decisions for downstream estimating.",govcon-skill,gate-3,high
+usaspending-api,"usaspending|award history|obligations|federal spending|piid lookup|transactions","Retrieves federal award, transaction, and spending data from USASpending workflows.",govcon-skill,all-gates,high
+usaspending-api-reference,"usaspending reference|filter codes|psc reference|vendor dedup","Provides companion reference material for USASpending workflows and filter values.",govcon-reference,all-gates,medium
+vendor-intelligence,"vendor intelligence|vendor due diligence|responsibility|uei|cage|entity check","Builds pre-award vendor due diligence using SAM.gov and USASpending workflows.",govcon-skill,gate-2,high
+vendor-intelligence-reference,"vendor intelligence reference|far 9 responsibility|risk flags|business types","Provides companion reference material for vendor intelligence and responsibility workflows.",govcon-reference,gate-2,medium
+00-piid-resolver,"piid resolver|resolve piid|canonical piid|award identifier resolution","Resolves PIIDs and related award identifiers into a canonical record before downstream analysis begins.",shipley-core,gate-1,high
+01-award-baseline,"award baseline|award facts|baseline award data|award summary","Builds a clean award baseline for downstream capture analysis using the govcon skill set.",shipley-core,gate-1,high
+02-entity-competitor,"competitor analysis|entity profile|incumbent analysis|competitor profile","Summarizes relevant entities and competitor context around an opportunity.",shipley-core,gate-2,high
+03-subaward-flags,"subaward analysis|subcontracting patterns|subaward flags|teaming patterns","Surfaces subaward patterns that may affect teaming strategy, incumbent assessment, or risk.",shipley-core,gate-2,medium
+04-market-agency-customer,"agency analysis|customer analysis|market context|buying behavior","Frames the market, agency, and customer environment around an opportunity.",shipley-core,gate-2,high
+05-executive-summary,"executive summary|capture summary|decision summary|signal inference evidence action","Synthesizes findings into a concise capture-oriented executive summary.",shipley-core,all-gates,high
+06-shipley-orchestrator,"shipley orchestrator|capture workflow|end-to-end capture analysis","Coordinates the sequence of govcon skills and Shipley-specific wrappers into one workflow.",shipley-core,all-gates,high
+shipley-bd-orchestrator,"bd orchestrator|module routing|skill routing|meta skill","Acts as the master meta-skill by loading module-help.csv and routing across govcon, Shipley, and productivity modules.",shipley-routing,all-gates,high
+shipley-milestone-0-qualification,"milestone 0|opportunity qualification|qualify opportunity|capture guide p87","Supports early opportunity qualification with concise evidence, rationale, and gaps.",shipley-gate,gate-1,high
+shipley-milestone-1-capture-planning,"milestone 1|capture planning|capture plan|gate 1 review","Turns early opportunity understanding into a practical capture planning view.",shipley-gate,gate-2,high
+shipley-milestone-2-pursuit,"milestone 2|pursuit decision|pursuit view|win strategy review","Supports pursuit decisions with clear evidence, rationale, and unresolved issues.",shipley-gate,gate-3,high
+shipley-milestone-3-bid-nobid,"milestone 3|bid no bid|bid decision|no-bid","Frames the bid or no-bid decision with evidence, blockers, and follow-up actions.",shipley-gate,gate-4,high
+shipley-milestone-4-pricing-review,"milestone 4|pricing review|price to win review|pricing posture","Supports pricing review discussions with concise evidence-based summaries.",shipley-gate,gate-5,high
+brainstorming,"brainstorm|ideation|concept development|options|whiteboard","Supports rapid ideation, alternative generation, and concept shaping.",productivity,all-gates,low
+call-plan-developer,"call plan|customer call|meeting plan|discovery questions|call prep","Builds customer or partner call plans with objectives, questions, and follow-up actions.",productivity,gate-2,medium
+color-team-reviews,"pink team|red team|gold team|blue team|color review|capture guide p43","Supports Color Team Reviews using Shipley review discipline and issue framing.",productivity,all-gates,medium
+customer-engagement,"customer engagement|relationship plan|engagement strategy|touchpoint plan","Builds structured customer engagement plans for capture campaigns.",productivity,gate-2,medium
+data-analysis,"analyze data|csv|spreadsheet|table analysis|trend analysis|dataset","Provides structured data analysis support for BD and capture workflows.",productivity,all-gates,medium
+executive-assistant,"executive summary support|briefing prep|leadership note|follow-up drafting","Provides executive-assistant style support for summaries, follow-ups, and leadership prep.",productivity,all-gates,medium
+idea-capturer,"capture idea|note idea|rough thought|working note|idea log","Captures rough ideas into structured notes, decisions, and next actions.",productivity,all-gates,low
+pricing-to-win,"price to win|ptw|competitive price|pricing strategy|pricing posture","Supports Pricing to Win analysis and pricing posture decisions.",productivity,gate-5,high
